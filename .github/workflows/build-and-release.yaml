@@ -1,7 +1,8 @@
 name: Build and Release
 on:
-  workflow_run:
-      branches: [main]
+  push:
+    branches:
+      - main
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
